@@ -1,30 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-import ScrollingText from './components/ScrollingText.tsx'
-import Announcements from './data/Announcements.tsx'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from './assets/vite.svg';
+import heroImg from './assets/hero.png';
+import './App.css';
+import ScrollingText from './components/ScrollingText.tsx';
 
-//Testing files
-// import testScrollingText from './components/testScrollingText.tsx'
+// Testing
+import TestScrollingText from './components/TestScrollingText.tsx';
+import Announcements from './data/Announcements.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
-  const announcements = Announcements
 
   return (
     <>
-      <div className="carousel">
-        <div className="group">
-          <div className="card">1</div>
-          <div className="card">2</div>
-          <div className="card">3</div>
-          <div className="card">4</div>
-          <div className="card">5</div>
-          <div className="card">6</div>
-        </div>        
-      </div>
+      <TestScrollingText items={Announcements}/>
 
       <div className="ticks"></div>
 

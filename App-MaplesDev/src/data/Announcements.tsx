@@ -5,13 +5,24 @@
 const Announcements: string[] = [
     
     // first item
-    "We meet in Mr. Stardum's room (M123) every Wednessday @ Lunch",
+    "We meet",
     
     // second item
-    "????"
+    "????",
+    
+    // third item
+    "works",
+    
+    // forth item
+    "maybe"
     
     // add more items below here
     
 ];
 
 export default Announcements;
+
+
+// modify the speed of the scrolling animation
+
+const Speed: number = 100;

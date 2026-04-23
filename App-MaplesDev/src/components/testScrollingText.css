@@ -1,16 +1,44 @@
 .carousel {
-    margin: 100px auto;
     width: 90%;
+    margin: 100px auto;
+    overflow: hidden;
     border: 5px solid red;
+}
+
+.track {
     display: flex;
+    width: max-content;
+    gap: 1em;
+    
+    animation: scroll linear infinite;
+    animation-duration: var(--duration, 10s);
+    
+    will-change: transform;
+    transform: translate3d(0,0,0);
+}
+
+.track:hover {
+    animation-play-state: paused;
+}
+
+.group {
+    display: flex;
+    gap: 1em;
 }
 
 .card {
-    height: 5em;
+    flex: 0 0 auto;
     padding: 1em;
     background: cornflowerblue;
-    font-size: 3rem;
     border-radius: .2em;
-    text-align: center;
-    align-content: center;
+    white-space: nowrap;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-1 * var(--distance)));
+    }
 }
