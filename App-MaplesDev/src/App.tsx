@@ -1,20 +1,23 @@
 import { useState } from 'react';
+import './App.css';
+import { Navigation } from './navigation';
+import ScrollingText from './components/animations/scroll-text';
+
+// remove later on
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
-import './App.css';
-import ScrollingText from './components/ScrollingText.tsx';
 
-// Testing
-import TestScrollingText from './components/TestScrollingText.tsx';
-import Announcements from './data/Announcements.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <TestScrollingText items={Announcements}/>
+      <section id="hero">
+        <ScrollingText />
+        <Navigation />
+      </section>
 
       <div className="ticks"></div>
 
