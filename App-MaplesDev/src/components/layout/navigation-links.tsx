@@ -15,7 +15,7 @@ import {
 
 export const navigationLinks = [
     {
-        name: "Projects",
+        name: "PROJECTS",
         subLinks: [
             /* Can add sublinks to a main link
             with these attributes:
@@ -27,14 +27,14 @@ export const navigationLinks = [
         ],
     },
     { 
-        name: "Leadership",
+        name: "LEADERSHIP",
         subLinks: [],    
     },
     { 
-        name: "Resources",
+        name: "RESOURCES",
             subLinks: [
                 {
-                    name: "Blog",
+                    name: "BLOG",
                     description: "",
                     link: "/blog",
                     color: "bg-teal-300",
@@ -43,7 +43,7 @@ export const navigationLinks = [
             ],
     },
     { 
-        name: "JoinUs",
+        name: "JOIN_US",
             subLinks: [],
     },
   ];
