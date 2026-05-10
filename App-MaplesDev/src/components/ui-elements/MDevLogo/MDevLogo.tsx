@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
+import MaplesDevLogo from "../../../assets/Logo/MaplesDev-Logo.svg";
 
 export const MDevLogo = () => {
-    let Maples = "maples {dev}";
 
     return (
         <Link to="/" className="flex items-center">
-            <span className="self-center text-4xl font-brick text-gray-800 whitespace-nowrap hover:text-gray-600">
-                {Maples}
+            <span className="self-center text-4xl text-gray-800 whitespace-nowrap">
+                <img className="w-80" src={MaplesDevLogo} alt="" />
             </span>
         </Link>
     )

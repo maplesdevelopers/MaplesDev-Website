@@ -5,7 +5,16 @@
 export const Announcements: string[] = [
     
     // first item
-    "We meet"
+    "We meet",
+    
+    // second item
+    "What is up guys",
+    
+    // third item
+    "We meet in Mr. Stardom's Room (M123) every Wednessday at Lunch time!",
+    
+    // forth item
+    "abcdefghijklmnopqrstuvwxyzabcdyoudoknowaboutmeyessiryesdiristhebeeass  I go bigger bigger I get closser to the pillar and then what happens"
     
     // add more items below here
     
