@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
     MDevLogo,
@@ -7,26 +7,77 @@ import {
     MobileMenu,
 } from '../ui-elements';
 import { navigationLinks } from './navigation-links';
+import { Memo } from '../../data/Announcements';
+import type { Clouds } from './interfaces';
 import ScrollingText from '../animations/scroll-text';
 
-export const Navbar = () => {
+import NeptunePlanet from '../../assets/Pixel-Planets/neptune.svg';
+import CloudIcon from '../../assets/Icons/cloud.svg';
+
+export const Navbar = ({top, size, left}: Clouds) => {
     const location = useLocation();
-
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+    
+    // spread the clouds over the screen respective to the logo
+    const clouds: Clouds[] = [
+        {
+          top: '0%',
+          size: '220px',
+          left: '-10%',
+        },
+        {
+          top: '60%',
+          size: '250px',
+          left:'55%',
+        },
+        {
+          top: '40%',
+          size: '200px',
+          left: '85%',
+        },
+        {
+          top: '30%',
+          size: '260px',
+          left: '-10%',
+        },
+        {
+          top: '67%',
+          size: '200px',
+          left: '5%',
+        },
+    ];
+    
+    // Animation refs
+    
+    const animationRef = useRef(0);
+    
     useEffect(() => {
         setIsMobileMenuOpen(false);
     }, [location]);
 
     return (
         <>
-            <nav className="flex flex-col grid-flow-col-dense grid grid-cols-6 gap-4 items-center h-70 m-0 bg-transparent">
-                <div className="flex flex-row items-center col-start-1 col-end-7 justify-center overflow-hidden w-full">
-                        <div className="justify-between flex items-center w-full">
-                            <div className="flex-1 flex justify-center">
+            <nav className="relative overflow-hidden flex flex-col grid-flow-col-dense grid grid-cols-6 gap-15 items-center mt-10 bg-sky-400/1">
+                {clouds.map((cloud, index) => (
+                    <div
+                        key={index}
+                        className="absolute aspect-square -z-10 pointer-events-none"
+                        style={{
+                            top: cloud.top,
+                            width: cloud.size,
+                            left: cloud.left,
+                        }}
+                    >
+                        <img src={CloudIcon} className="w-full h-full object-contain" alt=""/>
+                    </div>                
+                ))}
+                <div className="relative z-10 items-center col-start-1 col-end-7 justify-between w-full">
+                        <div className="flex justify-center w-full">
+                            <div className="grow w-18"></div>
+                            <div className="grow items-center order-center justify-center">
                                 <MDevLogo />
                             </div>
-                            <div className="w-12 px-2">
+                            <div className="flex-none items-center justify-center order-last pr-5">
                                 <HamburgerButton
                                     isOpen={isMobileMenuOpen}
                                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -34,14 +85,22 @@ export const Navbar = () => {
                             </div>
                         </div>
                 </div>
-                <div className="col-start-1 col-end-7 bg-transparent">
+                <div className="relative z-10 col-start-1 col-end-7 bg-transparent">
                     <ScrollingText />
                 </div>
-                <div className="col-start-1 col-end-7">
-                    {isMobileMenuOpen && <MobileMenu menuLinks={navigationLinks} />}
+                <div className="relative z-10 flex justify-between w-full col-start-1 col-end-7 mt-35 mb-35">
+                    <div className="grow w-18"></div>
+                    <div className="flex text-justify font-bold text-1xl items-center order-center justify-center">
+                        {Memo}
+                    </div>
+                    <div className="grow w-18"></div>
                 </div>
+                
+                {isMobileMenuOpen && <div className="relative z-10 col-start-1 col-end-7">
+                    {isMobileMenuOpen && <MobileMenu menuLinks={navigationLinks} />}
+                </div>}
+                
             </nav>
-            
         </>
     );
 };

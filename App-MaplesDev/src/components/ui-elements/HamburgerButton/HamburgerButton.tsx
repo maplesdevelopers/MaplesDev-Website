@@ -1,5 +1,6 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import FolderIcon from '../../../assets/Icons/folder.svg';
 
 export interface HamburgerButtonProps {
     isOpen: boolean;
@@ -9,10 +10,10 @@ export interface HamburgerButtonProps {
 export const HamburgerButton = ({ isOpen, onClick }: HamburgerButtonProps) => {
     return (
         <button
-            className="flex items-center justify-center w-10 h-10 p-2 font-semibold text-gray-800 rounded-lg cursor-pointer whitespace-nowrap hover:text-slate-700 hover:bg-slate-200"
+            className="flex items-center justify-center pb-12 w-full h-full text-gray-800 rounded-lg cursor-pointer"
             onClick={onClick}
         >
-            {isOpen ? <XMarkIcon /> : <Bars3Icon />}
+            <img src={FolderIcon} className="aspect-square w-12 bg-transparent hover:bg-sky-500/10" alt=""/>
         </button>
     );  
 };

@@ -16,15 +16,16 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #72BEEF;
   --foreground: #0a0a0a;
 }
 
 body {
   overscroll-behavior: none;
   color: var(--foreground);
+  font-family: var(--font-brick);
   background: var(--background);
-  
+  overflow-x: hidden;  
 }
 
 :root {
@@ -33,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -58,5 +59,25 @@ body {
   .close {
     margin-left: -24px;
     margin-top: -16px;
+  }
+}
+
+/*
+ * Blink animation
+ */
+ 
+.blink {
+  animation: blink-animation var(--blinkSpeed) ease-in-out infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: var(--lowestOpacity);
+  }
+  100% {
+    opacity: 1;
   }
 }
