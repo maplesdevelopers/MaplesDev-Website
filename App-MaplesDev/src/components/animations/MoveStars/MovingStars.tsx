@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
-import { motion } from 'framer-motion';
 
 function MovingStars() {
     const starsRef = useRef(null);

@@ -8,4 +8,5 @@ export interface Planet {
     yPercent: number;
     
     zIndex?: number;
+    scale?: number;
 }

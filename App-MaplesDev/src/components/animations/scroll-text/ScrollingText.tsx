@@ -161,6 +161,7 @@ function PixelItem({ text }: { text: string }) {
                     whitespace-nowrap
                     overflow-hidden
                     h-full
+                    text-black
                 "
                 style={{
                     left: `28px`,

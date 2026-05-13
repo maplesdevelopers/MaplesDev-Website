@@ -1,1 +1,1 @@
-export * from './TextWindowNew.tsx';
+export { default as SpaceWindow } from './SpaceWindow.tsx';

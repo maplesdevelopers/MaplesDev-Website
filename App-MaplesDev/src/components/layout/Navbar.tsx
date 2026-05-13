@@ -1,16 +1,21 @@
+// common
 import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
-    MDevLogo,
+    DisplayDevLogo,
     HamburgerButton,
     MenuLinks,
     MobileMenu,
 } from '../ui-elements';
+
+// components
 import { navigationLinks } from './navigation-links';
 import { Memo } from '../../data/Announcements';
-import type { Clouds } from './interfaces';
 import ScrollingText from '../animations/scroll-text';
 
+import type { Clouds } from './interfaces';
+
+// graphics
 import NeptunePlanet from '../../assets/Pixel-Planets/neptune.svg';
 import CloudIcon from '../../assets/Icons/cloud.svg';
 
@@ -57,11 +62,11 @@ export const Navbar = ({top, size, left}: Clouds) => {
 
     return (
         <>
-            <nav className="relative overflow-hidden flex flex-col grid-flow-col-dense grid grid-cols-6 gap-15 items-center mt-10 bg-sky-400/1">
+            <nav className="relative overflow-hidden flex flex-col grid-flow-col-dense grid grid-cols-6 gap-15 bg-sky-300/80 items-center mt-10">
                 {clouds.map((cloud, index) => (
                     <div
                         key={index}
-                        className="absolute aspect-square -z-10 pointer-events-none"
+                        className="absolute aspect-square z-0 pointer-events-none"
                         style={{
                             top: cloud.top,
                             width: cloud.size,
@@ -75,7 +80,7 @@ export const Navbar = ({top, size, left}: Clouds) => {
                         <div className="flex justify-center w-full">
                             <div className="grow w-18"></div>
                             <div className="grow items-center order-center justify-center">
-                                <MDevLogo />
+                                <DisplayDevLogo />
                             </div>
                             <div className="flex-none items-center justify-center order-last pr-5">
                                 <HamburgerButton

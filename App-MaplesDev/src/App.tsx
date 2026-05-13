@@ -1,19 +1,16 @@
 // common imports
-import { Canvas, useFrame } from '@react-three/fiber';
 import { useState } from 'react';
 import './App.css';
 
 // components
 import { Navigation } from './navigation';
-
-// animation
-import MovingStars from './components/animations/MoveStars';
+import { SpaceWindow } from './components/ui-elements/Hero';
 
 // icons
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
-import Left from './assets/Pixel-Button-Image/left.svg';
+import { Left } from './assets/Pixel-Button-Image';
 import Center from './assets/Pixel-Button-Image/center.svg';
 import Right from './assets/Pixel-Button-Image/right.svg';
 
@@ -23,14 +20,9 @@ function App() {
   return (
     <>
       <section id="hero">
+        <SpaceWindow />
         <Navigation />
       </section>
-      
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <MovingStars />
-        </Canvas>
-      </div>
       
       <div className="ticks"></div>
 
