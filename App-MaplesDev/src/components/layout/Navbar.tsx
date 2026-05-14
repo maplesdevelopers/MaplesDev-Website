@@ -62,7 +62,7 @@ export const Navbar = ({top, size, left}: Clouds) => {
 
     return (
         <>
-            <nav className="relative overflow-hidden flex flex-col grid-flow-col-dense grid grid-cols-6 gap-15 bg-sky-300/80 items-center mt-10">
+            <nav className="relative overflow-hidden flex flex-col grid-flow-col-dense grid grid-cols-6 gap-15 bg-[#0FBFF4] items-center mt-10">
                 {clouds.map((cloud, index) => (
                     <div
                         key={index}
