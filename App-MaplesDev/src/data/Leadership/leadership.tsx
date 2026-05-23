@@ -1,8 +1,33 @@
-// ADD HERE THE LEADERSHIP OF MAPLESDEV
-// INCLUDE:
-// NAME, (full or first)
-// POSITION, (ex: president, founder, vice-president, etc.)
-// PROJECT+ROLL, (name of the project and roll in the project involved in)
-// GRADE OR/AND Course, Optional (grade level or tech course enrolled in this semester)
-// ANYTHING ELSE, Optional
+import type { Person } from './interfaces';
 
+export const LeadershipData: Person[] = [
+    {
+        name: "Jai",
+        position: "Co-President",
+        project: "MaplesDev website",
+        project_role: "backend dev",
+        grade: "11",
+        description: "founded this community and now looking forward to grow it.",
+    },
+    {
+        name: "Girish",
+        position: "Vice President",
+        project: "MaplesDev website",
+        project_role: "frontend dev",
+        grade: "12",
+    },
+    {
+        name: "Bhavneet",
+        position: "Board Member",
+        project: "",
+        project_role: "",
+        grade: "12",
+    },
+    {
+        name: "Maksym Demydenko",
+        position: "Board Member",
+        project: "",
+        project_role: "",
+        grade: "12",
+    },
+];

@@ -1,3 +1,4 @@
+export * from './Home';
 export * from './Projects';
 export * from './Blog';
 export * from './Idea';
@@ -5,4 +6,4 @@ export * from './Resources';
 export * from './NotFound';
 export * from './JoinUs';
 export * from './Leadership';
-export * from './Home';
+export * from './Events';

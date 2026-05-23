@@ -1,6 +1,8 @@
-export interface Clouds {
-    top: string;
-    size: string;
-    side: 'left' | 'right' | 'center';
-    left: string;
+export interface LinksProps {
+    navLinks: NavLinks[];
+}
+
+export interface NavLinks {
+    name?: string;
+    link: string;
 }

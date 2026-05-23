@@ -1,23 +1,37 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @font-face {
-  font-family: 'Brick';
-  src: local('Brick'), url(./assets/fonts/NTBrickSans/NTBrickSans.ttf) format('truetype');
+  font-family: "NTBrickSans";
+  src: url("./assets/fonts/NTBrickSans/NTBrickSans.ttf");
 }
 
 @theme {
-  --font-brick: "Brick", sans-serif;
+  --font-brick: "NTBrickSans", sans-serif;
 
   --color-primary: #FF5733;
   --color-secondary: #1E40AF;
+}
 
-  --animate-scroll-left: scroll-left 1s linear infinite;
-  --animate-scroll-rest: scroll-to-rest 0.8s ease-out forwards;
+@layer utilities {
+  .transparent-text-with-border {
+    color: transparent;
+    -webkit-text-stroke: 1.5px black;
+    font-size: 36px;
+  }
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #FFFFFF;
+  --background: #DFF2FE;
+  --foreground: #000000;
+  
+  --primary-color: oklch(75% 0.183 55.934);
+  --secondary-color: #DFF2FE;
+  
+  --top-views: 80px;
+  --header-height: 80px;
+  --header-margin: 120px;
+  
+  --spacer-color: #27272A;
 }
 
 body {
@@ -59,25 +73,5 @@ body {
   .close {
     margin-left: -24px;
     margin-top: -16px;
-  }
-}
-
-/*
- * Blink animation
- */
- 
-.blink {
-  animation: blink-animation var(--blinkSpeed) ease-in-out infinite;
-}
-
-@keyframes blink-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: var(--lowestOpacity);
-  }
-  100% {
-    opacity: 1;
   }
 }

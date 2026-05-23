@@ -1,50 +1,24 @@
-// unecessary imports
-import {
-    ClockIcon,
-    PaperAirplaneIcon,
-    ReceiptRefundIcon,
-    DocumentIcon,
-    PlusCircleIcon,
-    ListBulletIcon,
-    DocumentTextIcon,
-    CommandLineIcon,
-    TicketIcon,
-    HeartIcon,
-    GiftIcon,
-} from '@heroicons/react/24/outline';
+import type { NavLinks } from './interfaces';
 
-export const navigationLinks = [
+export const navigationLinks: NavLinks[] = [
     {
         name: "PROJECTS",
-        subLinks: [
-            /* Can add sublinks to a main link
-            with these attributes:
-            name: "",
-            discription: "",
-            link: "",
-            color: "",
-            icon: </> */
-        ],
+        link: "/projects"
     },
-    { 
+    {
         name: "LEADERSHIP",
-        subLinks: [],    
+        link: "/leadership"
     },
-    { 
-        name: "RESOURCES",
-            subLinks: [
-                {
-                    name: "BLOG",
-                    description: "",
-                    link: "/blog",
-                    color: "bg-teal-300",
-                    icon: <DocumentTextIcon />
-                },
-            ],
+    {
+        name: "BLOG",
+        link: "/blog"
     },
-    { 
+    {
+        name: "EVENTS",
+        link: "/events",
+    },
+    {
         name: "JOIN_US",
-            subLinks: [],
+        link: "/join_us"
     },
-  ];
-  
+];

@@ -1,4 +1,4 @@
-export const Home = () => {
+export const Events = () => {
     return (
         <nav>
             <main 
@@ -21,7 +21,7 @@ export const Home = () => {
                         transparent-text-with-border
                     "
                 >
-                    About
+                    Events
                 </div>
                 <div className="relative top-[30px] flex-grow h-[0.15rem] bg-(--spacer-color)"></div>
             </main>
