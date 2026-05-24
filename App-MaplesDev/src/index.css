@@ -1,15 +1,9 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "NTBrickSans";
-  src: url("./assets/fonts/NTBrickSans/NTBrickSans.ttf");
-}
-
 @theme {
-  --font-brick: "NTBrickSans", sans-serif;
-
   --color-primary: #FF5733;
   --color-secondary: #1E40AF;
+
 }
 
 @layer utilities {
@@ -37,7 +31,6 @@
 body {
   overscroll-behavior: none;
   color: var(--foreground);
-  font-family: var(--font-brick);
   background: var(--background);
   overflow-x: hidden;  
 }

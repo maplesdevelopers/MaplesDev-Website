@@ -1,20 +1,15 @@
-import { Header } from './components/ui-elements/Header';
-import { Navigation } from './navigation';
+import { Hero } from './components/ui-elements/Hero';
 
 function App() {
     return (
         <>
-            <nav className="relative m-0">
-                <section className="fixed w-screen h-[var(--header-height)] z-10 bg-[var(--primary-color)]">
-                    <div className="m-0">
-                        <Header />
-                    </div>
+            <nav className="m-0 p-0 box-border">
+                <section className="relative py-[10vw] px-[15vw] min-h-[100dvh] flex place-content-center items-center justify-center" id="intro">
+                    <Hero />
                 </section>
                 
                 {/* Navigation */}
-                <section className="relative bottom-0 w-screen h-[var(--header-height)]">
-                    <Navigation />
-                </section>
+                
             </nav>
         </>
     );
