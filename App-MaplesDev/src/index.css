@@ -68,3 +68,14 @@ body {
     margin-top: -16px;
   }
 }
+
+.hero-text-animation {
+  transform: translateX(calc(-50% - clamp(7rem, 21vw, 35rem)));
+}
+
+@media (max-width: 419px) {
+  .hero-text-animation {
+    transform: translateX(calc(-50% - clamp(1rem, 2vw, 15rem))) !important;
+    left: 50%;
+  }
+}
