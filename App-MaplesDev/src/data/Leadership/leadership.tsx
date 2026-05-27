@@ -1,4 +1,4 @@
-import type { Person } from './interfaces';
+import type { Person, Member } from './interfaces';
 
 export const LeadershipData: Person[] = [
     {
@@ -17,17 +17,24 @@ export const LeadershipData: Person[] = [
         grade: "12",
     },
     {
-        name: "Bhavneet",
+        name: "Maksym",
         position: "Board Member",
         project: "",
         project_role: "",
         grade: "12",
     },
     {
-        name: "Maksym Demydenko",
-        position: "Board Member",
+        name: "Mr. Stardom",
+        position: "Teacher",
         project: "",
         project_role: "",
-        grade: "12",
+        grade: "",
+    },
+];
+
+export const MembersData: Member[] = [
+    {
+        year: "2025-2026",
+        members_count: 9,
     },
 ];

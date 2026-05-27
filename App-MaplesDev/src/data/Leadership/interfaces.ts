@@ -20,3 +20,8 @@ export interface Person {
     /** Optional, image url */
     image?: string;
 };
+
+export interface Memeber {
+    year: string;
+    member_count: number;
+};
