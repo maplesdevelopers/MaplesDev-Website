@@ -1,5 +1,24 @@
 import type { Person, Member } from './interfaces';
 
+export const TeacherAdvisorData: Person[] = [
+    {
+        name: "Mr. Stardom",
+        position: "Teacher and Advisor",
+        project: "",
+        project_role: "",
+        grade: "",
+        description: "",
+    },
+    {
+        name: "Mr. Kambo",
+        position: "Teacher and Advisor",
+        project: "",
+        project_role: "",
+        grade: "",
+        description: "",
+    },
+];
+
 export const LeadershipData: Person[] = [
     {
         name: "Jai",
@@ -22,13 +41,6 @@ export const LeadershipData: Person[] = [
         project: "",
         project_role: "",
         grade: "12",
-    },
-    {
-        name: "Mr. Stardom",
-        position: "Teacher",
-        project: "",
-        project_role: "",
-        grade: "",
     },
 ];
 
