@@ -1,4 +1,4 @@
-import { TeacherAdvisorData, LeadershipData, MembersData } from '../../../data/Leadership';
+import { TeacherAdvisorData, LeadershipData } from '../../../data/Leadership';
 
 export const NetworkContent = () => {
     return (
@@ -16,7 +16,7 @@ export const NetworkContent = () => {
             </div>
             
             {/* Teachers and Advisors */}
-            <div className="relative flex place-content-center mt-[100px] grid grid-cols-1 md:grid-cols-2">
+            <div className="relative flex place-content-center grid grid-cols-1 md:grid-cols-2 px-[100px]">
                 { TeacherAdvisorData.map((person) => (
                     <div
                         key={person.name}
@@ -36,7 +36,7 @@ export const NetworkContent = () => {
             </div>
             
             {/* Developers */}
-            <div className="relative grid grid-cols-1 md:grid-cols-2">
+            <div className="relative grid grid-cols-1 md:grid-cols-2 px-[100px]">
                 { LeadershipData.map((person) => (
                     <div
                         key={person.name}

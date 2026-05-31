@@ -1,21 +1,16 @@
 export const FunContent = () => {
     return (
-        <div className="pt-10 w-screen">
-            {/* Header */}
-           <div
+        <div className="relative w-full">
+            <div
                 className="
-                    text-[clamp(2rem,3vw,6rem)]
+                    text-[clamp(3.4rem,6vw,10rem)]
                     font-medium
                     text-center
                     leading-none
                 "
             >
-                Events
-            </div>
-            
-            <div className="h-[100dvh] w-screen items-center justify-center place-content-center flex">
-                hello
+                We meet in Mr. Stardom's room (M123) every wednesday at lunch.
             </div>
         </div>
     );
-}
+};

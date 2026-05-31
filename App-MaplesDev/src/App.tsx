@@ -1,4 +1,5 @@
 import { Hero } from './components/ui-elements/Hero';
+import { Footer } from './components/ui-elements/Footer';
 import { NetworkContent, CollaborationContent, FunContent } from './components/ui-elements/sections';
 
 function App() {
@@ -36,8 +37,13 @@ function App() {
                     <CollaborationContent />
                 </section>
                 
-                <section className="min-h-dvh min-w-screen" id="fun">
+                <section className="relative py-[10vw] px-[30vw] min-w-full min-h-dvh flex place-content-center items-center justify-center" id="fun">
                     <FunContent />
+                </section>
+                
+                {/* Footer */}
+                <section className="relative flex place-content-center h-[10px] w-full mb-30">
+                    <Footer />
                 </section>
             </nav>
         </>

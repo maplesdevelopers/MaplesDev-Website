@@ -21,7 +21,7 @@ export interface Person {
     image?: string;
 };
 
-export interface Memeber {
+export interface Member {
     year: string;
-    member_count: number;
+    members_count: number;
 };
