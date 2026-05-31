@@ -4,58 +4,56 @@ export const NetworkContent = () => {
     return (
         <div className="pt-5 w-screen">
             {/* Header */}
-            <header className="top-0">
-                <div className="flex-grow h-[0.05rem] bg-(--spacer-color)"></div>
-                <h2 className="text-[clamp(1rem,5.9vw,12rem)] text-nowrap text-center mt-[clamp(1rem,12vw,20rem)] leading-none font-light">MEET OUR 2025-26 LEADERSHIP TEAM</h2>
-                <div className="flex-grow h-[0.05rem] bg-(--spacer-color)"></div>
-            </header>
-            
-            <div className="relative flex flex-rol p-[10px]">
-                <div className="text-[16px]">Teachers and Advisors</div>
-                <div className="flex-grow min-w-[50px]"></div>
-                <div className="flex flex-col">
-                    { TeacherAdvisorData.map((person) => (
-                        <div
-                            key={person.name}
-                            className="
-                                relative
-                                m-w-full
-                                w-[clamp(10rem,130dvh,200dvh)]
-                                items-center
-                                justify-center
-                            "
-                        >
-                            <div
-                                className="text-[22px] text-start items-center justify-center"
-                            >{person.name}</div>
-                            <div className="flex-grow h-[0.05rem] bg-(--spacer-color)"></div>
-                        </div>
-                    ))}
-                </div>
+           <div
+                className="
+                    text-[clamp(2rem,3vw,6rem)]
+                    font-medium
+                    text-center
+                    leading-none
+                "
+            >
+                Meet Our 2025-26 Leadership Team
             </div>
             
-            <div className="relative flex flex-rol p-[10px]">
-                <div className="">Developers</div>
-                <div className="flex-grow min-w-[50px]"></div>
-                <div className="flex flex-col">
-                    { LeadershipData.map((person) => (
-                        <div
-                            key={person.name}
-                            className="
-                                relative
-                                m-w-full
-                                w-[clamp(10rem,130dvh,200dvh)]
-                                items-center
-                                justify-center
-                            "
-                        >
-                            <div
-                                className="text-[22px] text-start items-center justify-center"
-                            >{person.name}</div>
-                            <div className="flex-grow h-[0.05rem] bg-(--spacer-color)"></div>
-                        </div>
-                    ))}
-                </div>
+            {/* Teachers and Advisors */}
+            <div className="relative flex place-content-center mt-[100px] grid grid-cols-2">
+                { TeacherAdvisorData.map((person) => (
+                    <div
+                        key={person.name}
+                        className="
+                            relative
+                            flex
+                            flex-col
+                            place-content-center
+                            w-full
+                        "
+                    >
+                        <div className="text-[clamp(1.5rem,1.6vw,4rem)] text-center">{person.name}</div>
+                        <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.position}</div>
+                    </div>
+                ))}
+            </div>
+            
+            {/* Developers */}
+            <div className="relative mt-[100px] grid grid-cols-2">
+                { LeadershipData.map((person) => (
+                    <div
+                        key={person.name}
+                        className="
+                            relative
+                            flex
+                            flex-col
+                            place-content-center
+                            w-full
+                            p-[100px]
+                        "
+                    >
+                        <div className="text-[clamp(1.5rem,1.6vw,4rem)] text-center">{person.name}</div>
+                        <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.position}</div>
+                        <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.project}</div>
+                        <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.grade}</div>
+                    </div>
+                ))}
             </div>
         </div>
     );

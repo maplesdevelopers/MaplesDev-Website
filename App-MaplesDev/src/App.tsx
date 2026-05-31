@@ -29,6 +29,9 @@ function App() {
                     <NetworkContent />
                 </section>
                 
+                {/* Spacer */}
+                <div className="min-w-screen min-h-[50dvh]"></div>
+                
                 <section className="min-h-dvh min-w-screen" id="collaboration">
                     <CollaborationContent />
                 </section>
