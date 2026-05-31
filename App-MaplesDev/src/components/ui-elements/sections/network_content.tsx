@@ -16,7 +16,7 @@ export const NetworkContent = () => {
             </div>
             
             {/* Teachers and Advisors */}
-            <div className="relative flex place-content-center mt-[100px] grid grid-cols-2">
+            <div className="relative flex place-content-center mt-[100px] grid grid-cols-1 md:grid-cols-2">
                 { TeacherAdvisorData.map((person) => (
                     <div
                         key={person.name}
@@ -26,6 +26,7 @@ export const NetworkContent = () => {
                             flex-col
                             place-content-center
                             w-full
+                            p-[100px]
                         "
                     >
                         <div className="text-[clamp(1.5rem,1.6vw,4rem)] text-center">{person.name}</div>
@@ -35,7 +36,7 @@ export const NetworkContent = () => {
             </div>
             
             {/* Developers */}
-            <div className="relative mt-[100px] grid grid-cols-2">
+            <div className="relative grid grid-cols-1 md:grid-cols-2">
                 { LeadershipData.map((person) => (
                     <div
                         key={person.name}
