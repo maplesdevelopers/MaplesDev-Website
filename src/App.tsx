@@ -9,7 +9,7 @@ function App() {
                 className="m-0 p-0 box-border"
             >
                 <section
-                    className="relative py-[10vw] px-[20vw] min-w-full min-h-dvh flex place-content-center items-center justify-center" 
+                    className="relative py-[10vw] px-[30vw] min-w-full min-h-dvh m-0 flex flex-col place-content-center box-border wrap-break-word items-center justify-center" 
                     id="intro"
                 >
                     <Hero />
@@ -26,7 +26,7 @@ function App() {
                     </div>
                 </section>
                 
-                <section className="relative min-h-dvh min-w-screen" id="network">
+                <section className="relative min-h-dvh min-w-screen flex flex-col box-border items-center justify-center" id="network">
                     <NetworkContent />
                 </section>
                 
@@ -37,7 +37,7 @@ function App() {
                     <CollaborationContent />
                 </section>
                 
-                <section className="relative py-[10vw] px-[30vw] min-w-full min-h-dvh flex place-content-center items-center justify-center" id="fun">
+                <section className="relative py-[10vw] px-[30vw] min-w-full min-h-dvh m-0 flex flex-col place-content-center box-border wrap-break-word items-center justify-center" id="fun">
                     <FunContent />
                 </section>
                 

@@ -16,7 +16,7 @@ export const NetworkContent = () => {
             </div>
             
             {/* Teachers and Advisors */}
-            <div className="relative flex place-content-center grid grid-cols-1 md:grid-cols-2 px-[100px]">
+            <div className="relative flex flex-col place-content-center grid grid-cols-1 md:grid-cols-2">
                 { TeacherAdvisorData.map((person) => (
                     <div
                         key={person.name}
@@ -24,6 +24,8 @@ export const NetworkContent = () => {
                             relative
                             flex
                             flex-col
+                            items-center
+                            justify-center
                             place-content-center
                             w-full
                             p-[100px]
@@ -36,7 +38,7 @@ export const NetworkContent = () => {
             </div>
             
             {/* Developers */}
-            <div className="relative grid grid-cols-1 md:grid-cols-2 px-[100px]">
+            <div className="relative flex flex-col place-content-center grid grid-cols-1 md:grid-cols-2">
                 { LeadershipData.map((person) => (
                     <div
                         key={person.name}
@@ -44,6 +46,8 @@ export const NetworkContent = () => {
                             relative
                             flex
                             flex-col
+                            items-center
+                            justify-center
                             place-content-center
                             w-full
                             p-[100px]
@@ -51,7 +55,7 @@ export const NetworkContent = () => {
                     >
                         <div className="text-[clamp(1.5rem,1.6vw,4rem)] text-center">{person.name}</div>
                         <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.position}</div>
-                        <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.project}</div>
+                        <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center text-nowrap flex items-center justify-center">{person.project}</div>
                         <div className="text-[clamp(1.05rem,1.1vw,4rem)] text-center">{person.grade}</div>
                     </div>
                 ))}

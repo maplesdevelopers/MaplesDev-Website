@@ -30,9 +30,9 @@ export const CollaborationContent = () => {
                     >
                         <div className="text-[30px] px-[10px] border-1 items-center justify">{index}</div>
                         <div className="flex flex-col px-[15px] border-1">
-                            <div className="text-[30px] items-center justify-center">{project.title}</div>
-                            <div className="text-[30px]">{project.status}</div>
-                            <div className="text-[30px] invisible md:visible">{project.description}</div>
+                            <div className="text-[clamp(1.7rem,2vw,12rem)] text-nowrap flex items-center">{project.title}</div>
+                            <div className="text-[0px] invisible md:visible md:text-[30px]">{project.status}</div>
+                            <div className="text-[0px] invisible md:visible md:text-[30px]">{project.description}</div>
                         </div>
                     </div>
                 ))}
