@@ -5,14 +5,15 @@ import { NetworkContent, CollaborationContent, FunContent } from './components/u
 function App() {
     return (
         <>
-            <nav
-                className="m-0 p-0 box-border"
+            <div
+                className="m-0 p-0 box-border !scroll-smooth"
             >
                 <section
                     className="relative py-[10vw] px-[30vw] min-w-full min-h-dvh m-0 flex flex-col place-content-center box-border wrap-break-word items-center justify-center" 
                     id="intro"
                 >
                     <Hero />
+                    <p className="text-[clamp(1rem,1vw,1.6rem)] absolute bottom-10">[scroll]</p>
                 </section>
                 
                 {/* Navigation */}                
@@ -20,7 +21,10 @@ function App() {
                     className="min-h-[80dvh] min-w-full items-center justify-center"
                 >
                     <div className="flex place-content-center mt-[40dvh] gap-[1rem] text-[clamp(1rem,1vw,1.6rem)]">
-                        <a href="#network" className="border-[0.1rem] p-[0.5rem]">network</a>
+                        <a 
+                            href="#network" 
+                            className="border-[0.1rem] p-[0.5rem]"
+                        >network</a>
                         <a href="#collaboration" className="border-[0.1rem] p-[0.5rem]">collaboration</a>
                         <a href="#fun" className="border-[0.1rem] px-[1rem] py-[0.5rem]">fun</a>
                     </div>
@@ -28,10 +32,9 @@ function App() {
                 
                 <section className="relative min-h-dvh min-w-screen flex flex-col box-border items-center justify-center" id="network">
                     <NetworkContent />
+                    {/* Spacer */}
+                    <div className="min-w-screen min-h-[50dvh]"></div>
                 </section>
-                
-                {/* Spacer */}
-                <div className="min-w-screen min-h-[50dvh]"></div>
                 
                 <section className="min-h-dvh min-w-screen" id="collaboration">
                     <CollaborationContent />
@@ -45,7 +48,7 @@ function App() {
                 <section className="relative flex place-content-center h-[10px] w-full mb-30">
                     <Footer />
                 </section>
-            </nav>
+            </div>
         </>
     );
 };

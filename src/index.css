@@ -6,6 +6,12 @@
 
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer utilities {
   .transparent-text-with-border {
     color: transparent;
